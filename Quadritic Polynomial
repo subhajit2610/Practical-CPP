@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+class polynomial{
+    public:
+    int a=0,b=0,c=0,RHS=0;
+    void getdata(){
+        cout<<"Enter Coefficient Value of X^2, X and Constant and RHS value respectively - ";
+        cin>>a>>b>>c>>RHS;
+    }
+    void display(string x){
+        cout<<x<<" Quadritic Polynomial is - ";
+        cout<<a<<"x^2+"<<b<<"x+"<<c<<"="<<RHS<<endl;
+    }
+    polynomial operator+(polynomial B){
+        polynomial temp;
+        temp.a=a+B.a;
+        temp.b=b+B.b;
+        temp.c=c+B.c;
+        temp.RHS=RHS+B.RHS;
+        cout<<"Added Value Of Quadritic Polynomial is - "<<temp.a<<"x^2+"<<temp.b<<"x+"<<temp.c<<"="<<temp.RHS<<endl;
+    }
+};
+int main(){
+    polynomial A,B,C;
+    A.getdata();
+    A.display("First");
+    B.getdata();
+    B.display("Second");
+    C=A+B;
+    return 0;
+}
