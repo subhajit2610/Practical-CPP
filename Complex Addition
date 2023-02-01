@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+class complex{
+    public:
+    float real, img;
+    void getData(string x){
+        cout<<"\nEnter Real & Imaginary Part Of The "<<x<<" Object Respectively - ";
+        cin>>real;
+        cin>>img;
+    }
+    complex operator+(complex& B){
+        complex temp;
+        temp.real=real+B.real;
+        temp.img=img+B.img;
+        return temp;
+    }
+};
+int main(){
+    complex A,B,C;
+    A.getData("First");
+    B.getData("Second");
+    C=A+B;
+    cout<<"_______________________________________________\nAdded Value Of 2 Complex Numbers Are - ";
+    cout<<C.real<<" +i "<<C.img<<endl;
+    return 0;
+}
