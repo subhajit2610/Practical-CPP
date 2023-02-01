@@ -1,0 +1,60 @@
+#include<bits/stdc++.h>
+using namespace std;
+class demo{
+    public:
+    string s1,s2;
+    int res;
+    void getData(string& x){
+        s1=x;
+    }
+    demo operator+(demo& B);
+    demo operator>(demo& B);
+    demo operator<(demo& B);
+    demo operator=(demo& B);
+};
+demo demo::operator+(demo& B){
+    demo temp;
+    temp.s2=s1+B.s1;
+    cout<<"After Concatinating String Is - ";
+    cout<<temp.s2<<endl;
+    return temp;
+}
+demo demo::operator>(demo& B){
+    demo temp;
+    temp.res=s1.compare(B.s1);
+    if(temp.res>0){
+        cout<<s1<<"(string) is greater than (string)"<<B.s1<<endl;
+    }
+    return temp;
+}
+demo demo::operator<(demo& B){
+    demo temp;
+    temp.res=s1.compare(B.s1);
+    if(temp.res<0){
+        cout<<s1<<"(string)is lesser than (string)"<<B.s1<<endl;
+    }
+    return temp;
+}
+demo demo::operator=(demo& B){
+    demo temp;
+    temp.res=s1.compare(B.s1);
+    if(temp.res==0){
+        cout<<s1<<" & "<<B.s1<<" Both Strings Are Equal "<<endl;
+    }
+    return temp;
+}
+int main(){
+    demo A,B;
+    string a,b,c;
+    cout<<"Enter First String - ";
+    getline(cin,a);
+    cout<<"Enter Second String - ";
+    getline(cin,b); 
+    A.getData(a);
+    B.getData(b);
+    A+B;
+    A>B;
+    A<B;
+    A=B;
+    return 0;
+}
