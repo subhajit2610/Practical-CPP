@@ -9,9 +9,13 @@ class complex{
         cin>>img;
     }
     complex operator+(complex& B){
-        complex temp;
+        complex temp,temp1;
         temp.real=real+B.real;
         temp.img=img+B.img;
+        temp1.real=real*B.real;
+        temp1.img=img*+B.img;
+        cout<<"_______________________________________________\nMultipliedValue Of 2 Complex Numbers Are - ";
+        cout<<temp1.real<<" +i "<<temp1.img<<endl;
         return temp;
     }
 };
