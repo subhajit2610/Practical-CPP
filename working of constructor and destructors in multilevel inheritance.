@@ -1,0 +1,34 @@
+// Write a program to check working of constructor and destructors in multilevel inheritance. 
+#include<iostream>
+using namespace std;
+class A{
+    public:
+    A(){
+        cout<<"\nBase class A's constructor called "<<endl;
+    }
+    ~A(){
+         cout<<"\nBase class A's Destructor called "<<endl;
+    }
+};
+class B: public A{
+    public:
+    B(){
+        cout<<"\nBase class B's constructor called "<<endl;
+    }
+    ~B(){
+         cout<<"\nBase class B's Destructor called "<<endl;
+    }
+};
+class C:public B{
+    public:
+    C(){
+        cout<<"\nDerived class C's constructor called "<<endl;
+    }
+    ~C(){
+         cout<<"\nDerived class C's Destructor called "<<endl;
+    }
+};
+int main(){
+    C ob;
+    return 0;
+}
