@@ -1,0 +1,40 @@
+// Overload 3 releational operator - <  /   >   /   = 
+#include<iostream>
+#include<string>
+using namespace std;
+class overload{
+    public:
+    int x=0,y=0;
+    void getdata(string a){
+        cout<<"Enter Values of "<<a<<" Object - ";
+        cin>>x;
+    }
+    void operator>(overload B);
+    void operator<(overload B);
+    void operator==(overload B);
+};
+void overload :: operator>(overload B){
+    if(x>B.x){
+        cout<<x<<"is greater than "<<B.x<<endl;
+    }
+}
+void overload :: operator<(overload B){
+    if(x<B.x){
+        cout<<x<<"is lesser than "<<B.x<<endl;
+    }
+}
+void overload :: operator==(overload B){
+    if(x==B.x){
+        cout<<x<<" and "<<B.x<<" Is equal"<<endl;
+    }
+}
+int main(){
+    overload A,B;
+    A.getdata("First");
+    B.getdata("Second");
+    A>B;
+    A<B;
+    A==B;
+    return 0;
+    // ok ebar egano jaak
+}
