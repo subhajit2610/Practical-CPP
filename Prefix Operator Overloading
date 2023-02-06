@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+class prefix{
+    public:
+    int a=0;
+    prefix(){
+        cout<<"Enter Value Of A - ";
+        cin>>a;
+    }
+    void operator++(){
+        cout<<"Updated Value is - "<<++a;
+    }
+};
+int main(){
+    prefix A;
+    ++A;
+    return 0;
+}
