@@ -1,4 +1,4 @@
-// Overload 3 releational operator - <  /   >   /   = 
+// Overload 3 releational operator - <  /   >   /   ==
 #include<iostream>
 #include<string>
 using namespace std;
@@ -36,5 +36,4 @@ int main(){
     A<B;
     A==B;
     return 0;
-    // ok ebar egano jaak
 }
