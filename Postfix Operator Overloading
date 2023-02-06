@@ -1,0 +1,19 @@
+#include<iostream>
+using namespace std;
+class postfix{
+    public:
+    int a=0;
+    postfix(){
+        cout<<"Enter Value Of A - ";
+        cin>>a;
+    }
+    void operator++(int){
+        cout<<"Printing New Value of A Before using (Due to nature of Postfix Operation) - "<<a++<<endl;
+        cout<<"New Value is - "<<a;
+    }
+};
+int main(){
+    postfix A;
+    A++;
+    return 0;
+}
